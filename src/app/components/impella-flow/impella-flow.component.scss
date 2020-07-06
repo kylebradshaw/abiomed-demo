@@ -1,0 +1,59 @@
+@import "./../../../vars.sass";
+
+$circle-dim: 40px;
+$primary: $gray;
+
+:host {
+  position: relative;
+  padding-right: 20px
+}
+.impella {
+  position: absolute;
+  top: 2px;
+  right: 20px;
+  border: 1px solid $primary;
+  border-radius: $circle-dim;
+  width: $circle-dim;
+  height: $circle-dim;
+  background-image: linear-gradient(45deg, $primary 25%, transparent 25%), linear-gradient(-45deg, $primary 25%, transparent 25%), linear-gradient(45deg, transparent 75%, $primary 75%), linear-gradient(-45deg, transparent 75%, $primary 75%);
+  background-size: $circle-dim $circle-dim;
+  background-position: 0 0, 0 $circle-dim/2, $circle-dim/2 #{$circle-dim/2 * -1}, #{$circle-dim/2 * -1} 0px;
+  animation: rotation 4s linear infinite;
+  transform-origin: center center;
+}
+
+// .animated.rotation {
+//   animation-duration: 4s;
+//   animation-timing-function: linear;
+//   animation-name: rotation;
+//   animation-iteration-count: infinite;
+//   transform-origin: right center;
+// }
+
+@keyframes rotation {
+  from {
+    transform: rotate3d(0, 0, 1, 0deg);
+  }
+
+  to {
+    transform: rotate3d(0, 0, 1, 360deg);
+  }
+}
+
+.rate {
+  font-size: 60px;
+}
+.label {
+  font-size: 18px;
+}
+.numerator, .denominator {
+  font-size: 20px;
+}
+.numerator {
+  margin-bottom: 0;
+  border-bottom: 1px solid white;
+}
+.denominator {
+  margin-top: 0;
+  min-width: 50px;
+}

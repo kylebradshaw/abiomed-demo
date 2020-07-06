@@ -1,0 +1,32 @@
+.zebra {
+  margin: 10px 0 20px;
+  min-height: 10px;
+  border: 1px dashed #ccc;
+  background-image:
+    repeating-linear-gradient(
+      90deg,
+      transparent,
+      transparent 1rem,
+      #ccc 1rem,
+      #ccc 2rem
+    );
+  background-size: 200% 200%;
+  animation: barberpole 10s linear infinite;
+}
+
+@keyframes barberpole {
+  0% {
+    background-position: 100% 100%;
+  }
+}
+
+// .zebra {
+//   min-height: 10px;
+//   background: repeating-linear-gradient(
+//     to right,
+//     #f6ba52,
+//     #f6ba52 10px,
+//     #ffd180 10px,
+//     #ffd180 20px
+//   );
+// }
