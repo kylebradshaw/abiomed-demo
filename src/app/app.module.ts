@@ -4,6 +4,7 @@ import { NgModule } from '@angular/core';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { FlexLayoutModule } from '@angular/flex-layout';
+import { HighchartsChartModule } from 'highcharts-angular';
 import { ImpellaFlowComponent } from './components/impella-flow/impella-flow.component';
 import { PurgeSystemComponent } from './components/purge-system/purge-system.component';
 import { CardiacOutputComponent } from './components/cardiac-output/cardiac-output.component';
@@ -27,6 +28,7 @@ import { DashboardComponent } from './layouts/dashboard/dashboard.component';
     BrowserModule,
     AppRoutingModule,
     FlexLayoutModule,
+    HighchartsChartModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
