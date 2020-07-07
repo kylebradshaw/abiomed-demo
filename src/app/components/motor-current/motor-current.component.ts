@@ -56,9 +56,15 @@ export class MotorCurrentComponent implements OnInit {
         }]
       },
       options: {
+        animation: {duration: 0},
         cubicInterpolationMode: 'monotone',
         responsive: true,
         maintainAspectRatio: false,
+        elements: {
+          point: {
+            radius: 0
+          }
+        },
         legend: {
           display: false
         },
@@ -86,8 +92,7 @@ export class MotorCurrentComponent implements OnInit {
       } else {
         this.idx++;
       }
-      console.log(this.idx, this.ecgData[this.idx]);
-    }, 100);
+    }, 30);
   }
 
   // https://www.chartjs.org/docs/latest/developers/updates.html
