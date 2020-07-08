@@ -17,6 +17,9 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
+            "allowedCommonJsDependencies": [
+              "node_modules/chart.js"
+            ],
             "outputPath": "dist/abiomed-demo",
             "index": "src/index.html",
             "main": "src/main.ts",
