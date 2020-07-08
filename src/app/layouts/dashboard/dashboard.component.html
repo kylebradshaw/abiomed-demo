@@ -1,7 +1,7 @@
 <div class="viewport" fxLayout="row" fxLayoutGap="10px">
   <div class="main" fxLayout="column" fxLayoutGap="10px">
-    <app-placement-signals></app-placement-signals>
-    <app-motor-current></app-motor-current>
+    <app-placement-signals [scrollSpeed]="scrollSpeedValue"></app-placement-signals>
+    <app-motor-current [scrollSpeed]="scrollSpeedValue"></app-motor-current>
     <div class="heads-up" fxLayout="row" fxLayoutGap="10px" fxLayoutAlign="end start">
       <app-impella-flow></app-impella-flow>
       <app-purge-system></app-purge-system>
@@ -9,6 +9,8 @@
     </div>
   </div>
   <div class="side">
+    <h1>@{{scrollSpeedValue}}ms</h1>
+    <input [value]="scrollSpeedValue" (input)="onScrollSpeed($event)" type="range" min="5" max="100" step="5" id="scrollSpeed" name="scrollSpeed">
     <app-menu></app-menu>
   </div>
 </div>
